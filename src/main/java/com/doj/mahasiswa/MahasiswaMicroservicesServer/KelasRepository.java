@@ -14,5 +14,6 @@ public interface KelasRepository extends JpaRepository<Kelas, Long>{
 		// TODO Auto-generated method stub
 		return null;
 	}
+
 	//List<Kelas> findByName(String name);
 }
