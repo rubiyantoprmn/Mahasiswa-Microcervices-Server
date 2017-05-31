@@ -13,47 +13,47 @@ public class Kelas implements Serializable{
 private static final long serialVersionUID = 1L;
 	
 	@Id	
-	@Column(name= "id_kelas")
-	private char id_kelas;
+	@Column(name= "nama_kelas")
+	private char nama_kelas;
 	
-	@Column(name = "tingkat_mahasiswa")
-	private char tingkat_mahasiswa;
+	@Column(name = "tingkat_kelas")
+	private int tingkat_kelas;
 	
 	protected Kelas()
 	{
 		
 	}
 	
-	public Kelas(char id_kelas, char tingkat_mahasiswa)
+	public Kelas(char id_kelas, int tingkat_mahasiswa)
 	{
-		this.id_kelas = id_kelas;
-		this.tingkat_mahasiswa = tingkat_mahasiswa;
+		this.nama_kelas = id_kelas;
+		this.tingkat_kelas = tingkat_mahasiswa;
 	}
 	
-	public void setIdKelas(char id_kelas)
+	public void setNamaKelas(char id_kelas)
 	{
-		this.id_kelas = id_kelas;
+		this.nama_kelas = id_kelas;
 	}
 	
-	public char getIdKelas()
+	public int getNamaKelas()
 	{
-		return this.id_kelas;
+		return this.nama_kelas;
 	}
 	
-	public void setTingkatMahasiswa(char tingkat_mahasiswa)
+	public void setTingkatKelas(int tingkat_mahasiswa)
 	{
-		this.tingkat_mahasiswa = tingkat_mahasiswa;
+		this.tingkat_kelas = tingkat_mahasiswa;
 	}
 	
-	public char  getTingkatMahasiswa()
+	public int  getTingkatKelas()
 	{
-		return this.tingkat_mahasiswa;
+		return this.tingkat_kelas;
 	}
 	
 	@Override
 	public String toString()
 	{
-		return id_kelas + "\t" + tingkat_mahasiswa;
+		return nama_kelas + "\t" + tingkat_kelas;
 	}
 
 }

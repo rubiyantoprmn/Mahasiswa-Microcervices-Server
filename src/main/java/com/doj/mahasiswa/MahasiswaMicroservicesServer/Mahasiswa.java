@@ -28,15 +28,15 @@ public class Mahasiswa implements Serializable {
 	@Column(name = "nama_mahasiswa")
 	private String nama_mahasiswa;
 	
-	@JoinColumn(name = "id_kelas", referencedColumnName = "id_kelas", nullable = false)
+	@JoinColumn(name = "nama_kelas", referencedColumnName = "nama_kelas", nullable = false)
 	@ManyToOne(optional = false)
 	@NotFound(action = NotFoundAction.IGNORE)
-	private Kelas id_kelas;
+	private Kelas nama_kelas;
 	
-	@JoinColumn(name = "tingkat_mahasiswa", referencedColumnName = "tingkat_mahasiswa", nullable = false)
+	@JoinColumn(name = "tingkat_kelas", referencedColumnName = "tingkat_kelas", nullable = false)
 	@ManyToOne(optional = false)
 	@NotFound(action = NotFoundAction.IGNORE)
-	private Kelas tingkat_mahasiswa;
+	private Kelas tingkat_kelas;
 	
 	protected Mahasiswa()
 	{
@@ -71,26 +71,26 @@ public class Mahasiswa implements Serializable {
 	
 	public void setKelas(Kelas kelas)
 	{
-		this.id_kelas = kelas;
+		this.nama_kelas = kelas;
 	}
 	
 	public Kelas getKelas()
 	{
-		return this.id_kelas;
+		return this.nama_kelas;
 	}
 	
-	public void setTingkatMahasiswa(Kelas tingkat_mahasiswa)
+	public void setTingkatKelas(Kelas tingkat_mahasiswa)
 	{
-		this.tingkat_mahasiswa = tingkat_mahasiswa;
+		this.tingkat_kelas = tingkat_mahasiswa;
 	}
 	
-	public Kelas getTingkatMahasiswa(Kelas tingkat_mahasiswa)
+	public Kelas getTingkatKelas(Kelas tingkat_mahasiswa)
 	{
-		return this.tingkat_mahasiswa;
+		return this.tingkat_kelas;
 	}
 	
 	public String toString()
 	{
-		return nim_mahasiswa + "\t" + nama_mahasiswa + "\t" + id_kelas.toString() + "\t" + tingkat_mahasiswa.toString();
+		return nim_mahasiswa + "\t" + nama_mahasiswa + "\t" + nama_kelas.toString() + "\t" + tingkat_kelas.toString();
 	}
 }
