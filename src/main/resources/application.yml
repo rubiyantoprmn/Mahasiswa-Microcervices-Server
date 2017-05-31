@@ -12,8 +12,8 @@ spring:
   datasource:
     platform: postgres
     url: jdbc:postgresql://localhost:5432/MahasiswaMS
-    username: postgres
-    password: krause
+    username: mahasiswa
+    password: mahasiswa
     driverClassName: org.postgresql.Driver
 
 # Discovery Server Access
