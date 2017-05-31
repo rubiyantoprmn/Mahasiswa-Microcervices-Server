@@ -38,18 +38,18 @@ public class KelasController {
 	}
 	
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
-	public Kelas ById(@RequestParam("id_kelas") long id)
+	public Kelas ById(@RequestParam("nama_kelas") long id)
 	{
 		//logger.info("kelas-microservice byId() invoked: " + id);
 		//Kelas kelas = KelasRepository.getKelas(id);
 		//logger.info("kelas-microservice byId() found: " + kelas);
-		Long id_kelas = id;
-		Kelas kls = repository.findOne(id_kelas);
+		Long nama_kelas = id;
+		Kelas kls = repository.findOne(nama_kelas);
 		return kls;
 	}
 	
 	@RequestMapping(value ="/deletebyid/{id}", method = RequestMethod.DELETE)
-	public String deleteById(@RequestParam("id_kelas") long id)
+	public String deleteById(@RequestParam("nama_kelas") long id)
 	{
 		repository.delete(id);
 		
