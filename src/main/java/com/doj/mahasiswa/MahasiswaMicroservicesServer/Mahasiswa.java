@@ -4,14 +4,14 @@ import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-import org.hibernate.annotations.NotFound;
-import org.hibernate.annotations.NotFoundAction;
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> ac2af93b98c48fe5345821ed4da8666467152760
 @Entity
 @Table(name= "mahasiswa")
 public class Mahasiswa implements Serializable {
