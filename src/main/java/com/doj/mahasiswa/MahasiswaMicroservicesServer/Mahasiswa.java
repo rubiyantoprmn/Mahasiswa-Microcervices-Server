@@ -12,9 +12,6 @@ import org.hibernate.annotations.NotFound;
 import org.hibernate.annotations.NotFoundAction;
 
 
-import com.doj.mahasiswa.MahasiswaMicroservicesServer.Kelas;
-
-
 @Entity
 @Table(name= "mahasiswa")
 public class Mahasiswa implements Serializable {
