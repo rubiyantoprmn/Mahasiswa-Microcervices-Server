@@ -5,15 +5,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.doj.mahasiswa.MahasiswaMicroservicesServer.Mahasiswa;
 
-public interface MahasiswaRepository extends JpaRepository<Mahasiswa, Long>{
+public interface MahasiswaRepository extends JpaRepository<Mahasiswa, String>{
 
-	static List<Mahasiswa> getAllMahasiswa() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	static Mahasiswa getMahasiswa(String id) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
 }
