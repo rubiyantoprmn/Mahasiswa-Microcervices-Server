@@ -28,16 +28,6 @@ public class Mahasiswa implements Serializable {
 	@Column(name = "nama_mahasiswa")
 	private String nama_mahasiswa;
 	
-	@JoinColumn(name = "nama_kelas", referencedColumnName = "nama_kelas", nullable = false)
-	@ManyToOne(optional = false)
-	@NotFound(action = NotFoundAction.IGNORE)
-	private Kelas nama_kelas;
-	
-	@JoinColumn(name = "tingkat_kelas", referencedColumnName = "tingkat_kelas", nullable = false)
-	@ManyToOne(optional = false)
-	@NotFound(action = NotFoundAction.IGNORE)
-	private Kelas tingkat_kelas;
-	
 	protected Mahasiswa()
 	{
 		
@@ -69,28 +59,10 @@ public class Mahasiswa implements Serializable {
 		return this.nama_mahasiswa;
 	}
 	
-	public void setKelas(Kelas kelas)
-	{
-		this.nama_kelas = kelas;
-	}
 	
-	public Kelas getKelas()
-	{
-		return this.nama_kelas;
-	}
-	
-	public void setTingkatKelas(Kelas tingkat_mahasiswa)
-	{
-		this.tingkat_kelas = tingkat_mahasiswa;
-	}
-	
-	public Kelas getTingkatKelas(Kelas tingkat_mahasiswa)
-	{
-		return this.tingkat_kelas;
-	}
 	
 	public String toString()
 	{
-		return nim_mahasiswa + "\t" + nama_mahasiswa + "\t" + nama_kelas.toString() + "\t" + tingkat_kelas.toString();
+		return nim_mahasiswa + "\t" + nama_mahasiswa ;
 	}
 }
