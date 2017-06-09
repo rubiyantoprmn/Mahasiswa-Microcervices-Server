@@ -3,7 +3,6 @@ package com.doj.mahasiswa.MahasiswaMicroservicesServer;
 import java.util.List;
 import java.util.logging.Logger;
 
-import org.bouncycastle.eac.EACException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
