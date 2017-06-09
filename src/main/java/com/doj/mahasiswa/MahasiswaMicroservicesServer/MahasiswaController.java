@@ -3,6 +3,7 @@ package com.doj.mahasiswa.MahasiswaMicroservicesServer;
 import java.util.List;
 import java.util.logging.Logger;
 
+import org.bouncycastle.eac.EACException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -34,7 +35,7 @@ public class MahasiswaController {
 	}
 	
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
-	public Mahasiswa ById(@PathVariable("nim_mahasiswa") String id)
+	public Mahasiswa ById(@PathVariable("id") String id)
 	{
 		//logger.info("mahasiswa-microservice byId() invoked: " + id);
 		Mahasiswa mahasiswa = repository.findOne(id);
@@ -54,10 +55,13 @@ public class MahasiswaController {
 		 return mahasiswa;
 	}
 	
-	@RequestMapping(method = RequestMethod.DELETE)
-	public String deleteMahasiswa(@RequestParam("nim_mahasiswa") String id)
+	@RequestMapping(value ="/{id}", method = RequestMethod.DELETE)
+	public void deleteMahasiswa(@PathVariable("id") String id)
 	{
-		repository.delete(id);
-		return "Delete Berhasil";
+		try{
+			repository.delete(id);
+		} catch (Exception e){
+		
+		}
 	}
 }
