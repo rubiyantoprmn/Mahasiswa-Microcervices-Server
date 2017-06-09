@@ -7,7 +7,7 @@ before_install:
   - chmod +x ./mvnw
 
 install:
-  - ./mvnw clean package
+  - ./mvnw clean package -Dmaven.test.skip=true
 
 script:
   - true
