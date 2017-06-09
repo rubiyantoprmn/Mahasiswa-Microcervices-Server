@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 
@@ -53,4 +54,10 @@ public class MahasiswaController {
 		 return mahasiswa;
 	}
 	
+	@RequestMapping(method = RequestMethod.DELETE)
+	public String deleteMahasiswa(@RequestParam("nim_mahasiswa") String id)
+	{
+		repository.delete(id);
+		return "Delete Berhasil";
+	}
 }
