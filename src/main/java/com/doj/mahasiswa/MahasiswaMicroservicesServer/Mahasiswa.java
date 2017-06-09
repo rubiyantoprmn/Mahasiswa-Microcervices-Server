@@ -8,7 +8,10 @@ import javax.persistence.Table;
 
 
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> ac2af93b98c48fe5345821ed4da8666467152760
 @Entity
 @Table(name= "mahasiswa")
 public class Mahasiswa implements Serializable {
