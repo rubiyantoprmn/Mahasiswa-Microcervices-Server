@@ -3,14 +3,18 @@ language: java
 jdk:
   - oraclejdk8
 
+cache:
+  directories:
+    - $HOME/.m2
+
 before_install:
   - chmod +x ./mvnw
 
 install:
-  - ./mvnw clean package -Dmaven.test.skip=true
+  - true
 
 script:
-  - true
+  - ./mvnw clean package
 
 deploy:
   provider: azure_web_apps
