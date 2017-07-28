@@ -51,7 +51,7 @@ public class Mahasiswa implements Serializable {
 		return this.nama_mahasiswa;
 	}
 	
-	
+	//testing
 	
 	public String toString()
 	{
